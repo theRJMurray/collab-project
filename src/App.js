@@ -24,13 +24,13 @@ const AppContainer = ({ children }) => {
 const App = () => {
 	const [page, setPage] = useState("home");
 
-	const handlePageChange = () => {
-		setPage("next");
+	const handlePageChange = (page) => {
+		setPage(page);
 	};
 
 	return (
 		<AppContainer>
-			<Sidebar handlePageChange={handlePageChange} />
+			<Sidebar handlePageChange={handlePageChange} page={page} />
 			<Content page={page} />
 		</AppContainer>
 	);

@@ -1,17 +1,22 @@
 import React from "react";
 
-const NextPage = () => {
-	return <div style={{ background: "#FED", height: "100%" }}>Nextpage</div>;
+const Contact = () => {
+	return <div style={{ background: "#FED", height: "100%" }}>Contact</div>;
 };
 
 const HomePage = () => {
 	return <div>Homepage</div>;
 };
 
+const About = () => {
+	return <div style={{ background: "#EAF", height: "100%" }}>About</div>;
+};
+
 const Content = ({ page }) => {
 	let pages = {
 		home: HomePage,
-		next: NextPage,
+		contact: Contact,
+		about: About,
 	};
 	let CurrentContent = pages[page];
 
