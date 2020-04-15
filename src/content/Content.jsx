@@ -1,11 +1,8 @@
 import React from "react";
+import Explore from './Explore'
 
 const Contact = () => {
 	return <div style={{ background: "#FED", height: "100%" }}>Contact</div>;
-};
-
-const HomePage = () => {
-	return <div>Homepage</div>;
 };
 
 const About = () => {
@@ -14,7 +11,7 @@ const About = () => {
 
 const Content = ({ page }) => {
 	let pages = {
-		home: HomePage,
+		Explore: Explore,
 		contact: Contact,
 		about: About,
 	};

@@ -22,7 +22,7 @@ const AppContainer = ({ children }) => {
 };
 
 const App = () => {
-	const [page, setPage] = useState("home");
+	const [page, setPage] = useState("Explore");
 
 	const handlePageChange = (page) => {
 		setPage(page);

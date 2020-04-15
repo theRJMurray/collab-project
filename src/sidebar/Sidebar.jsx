@@ -1,29 +1,29 @@
 import React from "react";
-import Frog from "../imgs/frog.svg";
+import Explore from '../imgs/explore.svg'
 import Snek from "../imgs/snek.svg";
 import Plat from "../imgs/platypus.svg";
 
 const SidebarButton = ({ image, changePage, id, page }) => {
-	const swapPage = () => {
-		changePage(id);
-	};
+	const swapPage = () => changePage(id)
 
 	return (
 		<div
 			style={{
-				borderBottom: "1px solid #333",
-				width: 100,
-				height: 100,
-				background: page === id ? "#333" : null,
-				userSelect: "none",
+				width: 72,
+				height: 72,
+				background: page === id ? "lightgrey" : null,
+				userSelect: "none"
 			}}
 			onClick={swapPage}
 		>
-			<img
-				src={image}
-				alt=""
-				style={{ width: 80, height: 80, margin: 10 }}
-			/>
+			<div style={{display: 'flex', flexDirection: 'column', paddingTop: 18, margin: '0px auto', alignItems: 'center'}}>
+				<img
+					src={image}
+					alt=""
+					style={{ width: 24, height: 24, paddingBottom: 5 }}
+				/>
+				<span style={{fontSize: 12}}>{id}</span>
+			</div>
 		</div>
 	);
 };
@@ -37,15 +37,15 @@ const Sidebar = ({ handlePageChange, page }) => {
 		<div
 			className="sidebar"
 			style={{
-				width: 100,
+				width: 72,
 				height: "100%",
 				background: "#EEE",
 				borderRight: "1px solid #777",
 			}}
 		>
 			<SidebarButton
-				id={"home"}
-				image={Frog}
+				id={"Explore"}
+				image={Explore}
 				changePage={changePage}
 				page={page}
 			/>
