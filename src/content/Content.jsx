@@ -1,5 +1,6 @@
 import React from "react";
 import Explore from './Explore'
+import Inventory from '../components/Inventory'
 
 const Contact = () => {
 	return <div style={{ background: "#FED", height: "100%" }}>Contact</div>;
@@ -23,6 +24,7 @@ const Content = ({ page }) => {
 			style={{ width: "100%", height: "100%", background: "#C0FFEE" }}
 		>
 			<CurrentContent />
+			<Inventory />
 		</div>
 	);
 };
